@@ -4,19 +4,19 @@
        libros=[];
         function menu() {
             let opcion = 0;
-            while (opcion !== 6) {
+            while (opcion !==3) {
                 opcion = parseInt(prompt(`
                 Sistema de Lectura
                 1. Agregar una nuevo libro a la lista
                 2. Ver libros
-                4. Salir
+                3. Salir
                 `));
 
                 switch (opcion) {
                     case 1:
                         agregarLibro();
                         
-                        cl
+                        
                         break;
                     case 2:
                         VerLibros(libros);
@@ -31,29 +31,46 @@
                 }
             }
         }
-        agregarLibro(){
+       
+       function agregarLibro(){
 
             
             let titulo=prompt("Ingrese el nombre del libro");
             let autor=prompt("Ingrese el autor del libro");
             let descripcion=prompt("Ingrese la descripcion del libro");
             let calificacion=prompt("Ingrese su calificacion final de 1-10");
-            const libro={
+           
+          
+        
+                const libro={
 
-                titulo: titulo,
-                autor: autor,
-                descripcion: descripcion,
-                calificacion: calificacion
+                    titulo: titulo,
+                    autor: autor,
+                    descripcion: descripcion,
+                    calificacion: calificacion
 
-            };
-            libros.push(libro);
-        }
-        VerLibros(libros){
-            libros.array.forEach(librot => {
-                console.alert("Titulo:")
-            });
+                };
+                libros.push(libro);
+
+            
             
         }
+        function VerLibros(libros){
+            if(libros===null){
+
+                window.alert("Su liberia esta vacia");
+
+            }
+        else{
+            console.log(libros);
+
+        
+
+            }
+           
+            
+        }
+        libros=[];
         menu();
 
 
