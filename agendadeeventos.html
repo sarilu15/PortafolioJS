@@ -1,0 +1,65 @@
+<body>
+    <h1>Registro de libros leidos</h1>
+    <script>
+       libros=[];
+        function menu() {
+            let opcion = 0;
+            while (opcion !== 6) {
+                opcion = parseInt(prompt(`
+                Sistema de Lectura
+                1. Agregar una nuevo libro a la lista
+                2. Ver libros
+                4. Salir
+                `));
+
+                switch (opcion) {
+                    case 1:
+                        agregarLibro();
+                        
+                        cl
+                        break;
+                    case 2:
+                        VerLibros(libros);
+                       
+                        break;
+                   
+                    case 3:
+                        alert("Saliendo del programa...");
+                        break;
+                    default:
+                        alert("Por favor, selecciona una opción válida.");
+                }
+            }
+        }
+        agregarLibro(){
+
+            
+            let titulo=prompt("Ingrese el nombre del libro");
+            let autor=prompt("Ingrese el autor del libro");
+            let descripcion=prompt("Ingrese la descripcion del libro");
+            let calificacion=prompt("Ingrese su calificacion final de 1-10");
+            const libro={
+
+                titulo: titulo,
+                autor: autor,
+                descripcion: descripcion,
+                calificacion: calificacion
+
+            };
+            libros.push(libro);
+        }
+        VerLibros(libros){
+            libros.array.forEach(librot => {
+                console.alert("Titulo:")
+            });
+            
+        }
+        menu();
+
+
+
+
+
+    </script>
+</body>
+
